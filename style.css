@@ -1,0 +1,58 @@
+/* Reset some default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General page styling */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f8;
+    color: #333333;
+}
+
+/* Header */
+header {
+    background-color: #1f3a5f;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Navigation */
+nav {
+    background-color: #2c4c75;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #1f3a5f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 40px;
+}
