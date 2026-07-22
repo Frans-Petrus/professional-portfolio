@@ -1,47 +1,90 @@
-// ======================================
-// Professional Portfolio
-// Main JavaScript
-// ======================================
+const semesters = {
 
-document.addEventListener("DOMContentLoaded", () => {
+    "semester-2026-1": [
 
-    loadAcademicSummary();
+        {
+            module: "Artificial Intelligence",
+            code: "CMPG313",
+            mark: 75
+        },
 
-});
+        {
+            module: "Computer Networks",
+            code: "CMPG315",
+            mark: 68
+        },
 
-function loadAcademicSummary() {
+        {
+            module: "Databases",
+            code: "CMPG311",
+            mark: 75
+        },
 
-    const container = document.getElementById("academic-summary");
+        {
+            module: "Decision Support Systems I",
+            code: "CMPG312",
+            mark: 65
+        }
 
-    // Only run on the Academics page
-    if (!container) return;
+    ]
 
-    container.innerHTML = `
+};
 
-        <div class="stats-grid">
+function createSemester(containerId, modules) {
 
-            <div class="stat-card">
-                <h2>${academicSummary.distinctions}</h2>
-                <p>Distinctions Earned</p>
+    const container = document.getElementById(containerId);
+
+    let html = "";
+
+    modules.forEach(module => {
+
+        const badge =
+            module.mark >= 75
+            ? '<span class="badge distinction">Distinction</span>'
+            : '<span class="badge pass">Pass</span>';
+
+        html += `
+
+            <div class="module-row">
+
+                <div class="module-name">
+
+                    <strong>${module.module}</strong><br>
+
+                    ${module.code}
+
+                </div>
+
+                <div class="module-mark">
+
+                    ${module.mark}%
+
+                </div>
+
+                <div>
+
+                    ${badge}
+
+                </div>
+
             </div>
 
-            <div class="stat-card">
-                <h2>${academicSummary.completedModules}</h2>
-                <p>Modules Completed</p>
-            </div>
+        `;
 
-            <div class="stat-card">
-                <h2>${academicSummary.expectedGraduation}</h2>
-                <p>Expected Graduation</p>
-            </div>
+    });
 
-            <div class="stat-card">
-                <h2>${academicSummary.matricAverage}%</h2>
-                <p>National Senior Certificate Average</p>
-            </div>
+    container.innerHTML = html;
 
-        </div>
+}
 
-    `;
+for (const semester in semesters) {
+
+    createSemester(
+
+        semester,
+
+        semesters[semester]
+
+    );
 
 }
