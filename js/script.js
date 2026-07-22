@@ -26,7 +26,87 @@ const semesters = {
             mark: 65
         }
 
-    ]
+    ],
+
+    "semester-2025-1": [
+
+        {
+            module: "Apps and Advanced User Interface Programming",
+            code: "CMPG212",
+            mark: 87
+        },
+
+        {
+            module: "Communication Skills",
+            code: "CMPG214",
+            mark: 82
+        },
+
+        {
+            module: "Information Security",
+            code: "CMPG215",
+            mark: 81
+        },
+
+        {
+            module: "Object-Oriented Programming",
+            code: "CMPG211",
+            mark: 76
+        },
+
+        {
+            module: "System Analysis and Design I",
+            code: "CMPG213",
+            mark: 67
+        },
+
+        {
+            module: "Understanding the Natural World",
+            code: "WVNS211",
+            mark: 77
+        }
+
+    ],
+
+    "semester-2025-2": [
+
+        {
+            module: "Data Analytics II",
+            code: "CMPG222",
+            mark: 70
+        },
+
+        {
+            module: "Data Structures and Algorithms",
+            code: "CMPG221",
+            mark: 60
+        },
+
+        {
+            module: "Discrete Mathematics",
+            code: "MTHS225",
+            mark: 86
+        },
+
+        {
+            module: "Problem Solving for Managers",
+            code: "BMAN223",
+            mark: 81
+        },
+
+        {
+            module: "System Analysis and Design II",
+            code: "CMPG223",
+            mark: 68
+        },
+
+        {
+            module: "Understanding the Natural World",
+            code: "WVNS221",
+            mark: 83
+        }
+
+    ],
 
 };
 
@@ -45,7 +125,7 @@ function createSemester(containerId, modules) {
 
         html += `
 
-            <div class="module-row">
+            <div class="module-row ${module.mark >= 75 ? 'distinction' : ''}">
 
                 <div class="module-name">
 
