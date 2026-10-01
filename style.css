@@ -89,10 +89,11 @@ main p {
 ========================================================= */
 
 .page-header {
-    background: linear-gradient(135deg, #111111, #444444);
+    background: #000000;
     color: white;
     text-align: center;
     padding: 80px 20px;
+    font-family: 'Alice', Georgia, serif;
 }
 
 .subtitle {
