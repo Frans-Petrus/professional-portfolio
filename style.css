@@ -43,7 +43,7 @@ html {
 ========================================================= */
 
 body {
-    font-family: "Poppins", Arial, sans-serif;
+    font-family: 'Alice', Georgia, serif;
     line-height: 1.7;
     color: var(--text);
     background: var(--background);
@@ -93,7 +93,6 @@ main p {
     color: white;
     text-align: center;
     padding: 80px 20px;
-    font-family: 'Alice', Georgia, serif;
 }
 
 .subtitle {
